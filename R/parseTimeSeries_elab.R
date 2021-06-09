@@ -74,7 +74,7 @@ parseTimeSeries.elab <- function(parseableTables,
     # READ DATA FROM ELABFTW
     #
     # Create a list of spectra by looping over one row of the given table and read the files containing spectra
-    timeSeries <- lapply(table[,col.spectra], function(filename) {
+    timeSeries <- lapply(dplyr::pull(table, col.spectra), function(filename) {
       
       # Check if the current element of the table is listed in the look-up table 'filetable'
       match.lookUpTable <- paste0("^", filename, "$") %>% grepl(., filetable[,1])
