@@ -67,7 +67,7 @@ parseTimeSeries.elab <- function(parseableTables,
     table <- tables[[index]]
     
     # Create a progress bar
-    progress <- progress::progress_bar$new(total = length(table[,1]), 
+    progress <- progress::progress_bar$new(total = nrow(table), 
                                            format = paste0("Download ExpID ", metadata$id, " (Table ", index, "/", length(tables), ") [:bar] :eta remaining.") )
     
     #
