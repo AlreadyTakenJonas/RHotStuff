@@ -15,6 +15,8 @@ theme_hot <- function() {
       panel.grid.major = ggplot2::element_line("black", size = 0.1),
       panel.grid.minor = ggplot2::element_line("grey", size = 0.5),
       # Make the plot title and the axis titles bold
-      title = ggplot2::element_text(face="bold"), axis.title = ggplot2::element_text(face="bold")
+      title = ggplot2::element_text(face="bold"), axis.title = ggplot2::element_text(face="bold"),
+      # Make facet_wrap labels bold
+      strip.text = element_text(face = "bold")
     )
 }
